@@ -1,0 +1,14 @@
+{
+  "name": "rocks-puppetalive",
+  "version": "0.1.0",
+  "author": "Juan Eduardo Ramirez",
+  "summary": "test puppet on rocks nodes",
+  "license": "Apache 2.0",
+  "source": "https://github.com/jeramirez/rocks-puppetalive",
+  "issues_url": "https://github.com/jeramirez/rocks-puppetalive/issues",
+  "project_page": "https://github.com/jeramirez/rocks-puppetalive",
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+  ]
+}
+
