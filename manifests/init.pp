@@ -1,14 +1,13 @@
 # == Class: puppetalive
 #
-# Full description of class puppetalive here.
+# Demo class to show how puppet works and how handle parameters
+# by writing a file to nodes being a parameter the file content.
 #
 # === Parameters
 #
-# Document parameters here.
-#
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
+# [*file_content*]
+#   This parameter is the text in puppetalive file and it defaults to
+#   "parameter -file_content- used for -default text-"
 #
 # === Variables
 #
@@ -24,19 +23,22 @@
 # === Examples
 #
 #  class { 'puppetalive':
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
+#    file_content => 'puppetalive text content managed by puppet',
 #  }
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# J. Eduardo Ramirez <juaneduardo.ramirez@upr.edu>
 #
 # === Copyright
 #
-# Copyright 2015 Your name here, unless otherwise noted.
+# Copyright 2015 J. E. Ramirez, unless otherwise noted.
 #
-class puppetalive {
+class puppetalive (
+	$file_content = $puppetalive::params::file_content,
+){
 	file { "/root/puppetalive":
 		ensure => "file",
+		content=> $file_content,
 	}
 }
