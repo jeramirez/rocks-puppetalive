@@ -15,9 +15,9 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
+A sample module to introduce how puppet works, in context of Rocks clusters by creating a single file
+(/root/puppetalive) with content handled by parameters and (facter) variables taken from Rocks commands.
+Ready for module developers.
 
 ## Module Description
 
@@ -36,7 +36,7 @@ management, etc.) this is the time to mention it.
 * A list of files, packages, services, or operations that the module will alter,
   impact, or execute on the system it's installed on.
 * This is a great place to stick any warnings.
-* Can be in list or paragraph form.
+* Create file /root/puppetalive.
 
 ### Setup Requirements **OPTIONAL**
 
